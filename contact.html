@@ -1,1 +1,66 @@
-<html><body><h1>Contact</h1></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact — The Enchanted Flame</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+  <div class="container">
+    
+<header>
+  <a class="brand" href="index.html">
+    <img src="assets/logo.png" alt="The Enchanted Flame logo">
+    <div>
+      <h1>The Enchanted Flame</h1>
+      <div style="color:var(--muted);font-size:13px">A touch of magic in every flame</div>
+    </div>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+    <main style="margin-top:8px">
+      <h2>Contact</h2>
+      <p class="lead">Questions about scents, custom orders, or wholesale? Send us a message.</p>
+
+      <div class="card">
+        <form id="contactForm" onsubmit="handleContact(event)" style="display:grid;gap:10px">
+          <label><strong>Name</strong><br><input name="name" required style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit"></label>
+          <label><strong>Email</strong><br><input name="email" type="email" required style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit"></label>
+          <label><strong>Message</strong><br><textarea name="message" rows="5" required style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit"></textarea></label>
+          <div style="display:flex;gap:8px">
+            <button class="btn" type="submit">Send message</button>
+            <a class="btn secondary" href="mailto:hello@theenchantedflame.com">Email directly</a>
+          </div>
+          <div id="formMessage" style="color:var(--muted);font-size:13px"></div>
+        </form>
+      </div>
+
+      <section style="margin-top:12px" class="card">
+        <h3>Wholesale & Events</h3>
+        <p style="color:var(--muted)">Interested in stocking our candles or partnering for an event? Tell us a bit about your business in the form above.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© 2025 The Enchanted Flame</div>
+      <div style="color:var(--muted)">Handmade candles • Made with care</div>
+    </footer>
+  </div>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value.trim());
+      const email = encodeURIComponent(f.email.value.trim());
+      const message = encodeURIComponent(f.message.value.trim());
+      // Mailto fallback:
+      const mailto = 'mailto:hello@theenchantedflame.com?subject=Contact from ' + name + '&body=' + message + '%0A%0AFrom:%20' + name + '%20(' + email + ')';
+      window.location.href = mailto;
+      document.getElementById('formMessage').textContent = 'Opening your email client...';
+    }
+  </script>
+</body>
+</html>
