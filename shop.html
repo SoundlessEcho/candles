@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Enchanted Flame — Shop</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    
+<header>
+  <a class="brand" href="index.html">
+    <img src="assets/logo.png" alt="The Enchanted Flame logo">
+    <div>
+      <h1>The Enchanted Flame</h1>
+      <div style="color:var(--muted);font-size:13px">A touch of magic in every flame</div>
+    </div>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="downloads.html">Downloads</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+    <main style="margin-top:8px">
+      <h2>Shop — Candles Collection</h2>
+      <p class="lead">Browse our handcrafted candles. Click a product to view details or add it to the cart.</p>
+
+      <div class="product-grid" id="products">
+        <!-- Products (placeholders) -->
+        <div class="product" id="p1">
+          <div class="thumb">Moonlit Amber</div>
+          <strong>Moonlit Amber</strong>
+          <div style="color:var(--muted)">Amber, warm spice — 60hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p1');return false;">Add to Cart</a>
+            <a class="btn secondary" href="product-moonlit-amber.html">Details</a>
+          </div>
+        </div>
+        <div class="product" id="p2">
+          <div class="thumb">Lavender Spell</div>
+          <strong>Lavender Spell</strong>
+          <div style="color:var(--muted)">English lavender — 50hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p2');return false;">Add to Cart</a>
+            <a class="btn secondary" href="product-lavender-spell.html">Details</a>
+          </div>
+        </div>
+        <div class="product" id="p3">
+          <div class="thumb">Vanilla Enchantment</div>
+          <strong>Vanilla Enchantment</strong>
+          <div style="color:var(--muted)">Creamy vanilla — 55hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p3');return false;">Add to Cart</a>
+            <a class="btn secondary" href="product-vanilla-enchantment.html">Details</a>
+          </div>
+        </div>
+        <div class="product" id="p4">
+          <div class="thumb">Cedar & Smoke</div>
+          <strong>Cedar & Smoke</strong>
+          <div style="color:var(--muted)">Woodsy, warm — 65hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p4');return false;">Add to Cart</a>
+            <a class="btn secondary" href="#">Details</a>
+          </div>
+        </div>
+        <div class="product" id="p5">
+          <div class="thumb">Rose Gold Glow</div>
+          <strong>Rose Gold Glow</strong>
+          <div style="color:var(--muted)">Rose, soft musk — 45hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p5');return false;">Add to Cart</a>
+            <a class="btn secondary" href="#">Details</a>
+          </div>
+        </div>
+        <div class="product" id="p6">
+          <div class="thumb">Forest Whisper</div>
+          <strong>Forest Whisper</strong>
+          <div style="color:var(--muted)">Pine, cedar — 50hr</div>
+          <div style="display:flex;gap:8px;margin-top:auto">
+            <a class="btn" href="#" onclick="addToCart('p6');return false;">Add to Cart</a>
+            <a class="btn secondary" href="#">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;color:var(--muted);font-size:13px">Note: This demo uses a mock cart. To accept payments online, you can connect PayPal, Stripe, or Shopify — instructions are in README.</div>
+    </main>
+
+    <footer class="footer">
+      <div>© 2025 The Enchanted Flame</div>
+      <div style="color:var(--muted)">Handmade candles • Made with care</div>
+    </footer>
+  </div>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
